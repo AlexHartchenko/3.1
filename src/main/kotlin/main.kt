@@ -2,7 +2,7 @@ package ru.netology
 
 fun main() {
 
-    val absenceTime = 70_000
+    val absenceTime = 3_000
 
     agoToText(absenceTime)
 }
@@ -22,7 +22,7 @@ private fun agoToText(absenceTime: Int) {
         }
         in 86_401..172_800 -> println("Был(а) сегодня")
         in 172_801..259_200 -> println("Был(а) вчера")
-        else -> println("Был(а) давно, уж и не помним когда :)")
+        else -> println("Был(а) давно..")
     }
 }
 
