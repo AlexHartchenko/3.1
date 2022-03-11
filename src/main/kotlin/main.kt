@@ -1,8 +1,11 @@
 package ru.netology
 
-fun main() {
+const val absenceTime = 3500
 
-    val absenceTime = 3_000
+const val minutes = absenceTime / 60
+const val hours = absenceTime / 3600
+
+fun main() {
 
     agoToText(absenceTime)
 }
@@ -11,12 +14,12 @@ private fun agoToText(absenceTime: Int) {
     when (absenceTime) {
         in 0..60 -> println("Был(а) только что")
         in 61..3_600 -> {
-            val time = absenceTime / 60
+            val time = minutes
             val minutesToText = minutes(time)
             println("Был(а) $time $minutesToText назад")
         }
         in 3_601..86_400 -> {
-            val time = (absenceTime / 3_600)
+            val time = hours
             val hoursToText = hours(time)
             println("Был(а) $time $hoursToText назад")
         }
